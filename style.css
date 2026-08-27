@@ -6,6 +6,7 @@
 /* Tampilan halaman */
 body {
     margin: 0;
+    padding: 40px 20px;
     min-height: 100vh;
 
     display: flex;
@@ -218,8 +219,8 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-/* Tombol Daftar */
-button[type="submit"] {
+/* Tombol */
+button {
     width: 100%;
 
     padding: 13px;
@@ -244,7 +245,7 @@ button[type="submit"] {
 }
 
 /* Efek hover tombol */
-button[type="submit"]:hover {
+button:hover {
     background-color: #333;
 
     transform: translateY(-1px);
@@ -308,7 +309,7 @@ a:hover {
     input[type="date"],
     select,
     textarea,
-    button[type="submit"] {
+    button {
         font-size: 16px;
     }
 }
