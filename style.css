@@ -17,10 +17,9 @@ body {
     background-color: #f4f1ec;
 }
 
-/* Kotak Login */
-.login-container {
-    width: 380px;
-
+/* Kotak Login & Register */
+.login-container,
+.register-container {
     padding: 40px;
 
     background-color: #ffffff;
@@ -32,7 +31,15 @@ body {
     text-align: left;
 }
 
-/* Judul LOGIN */
+.login-container {
+    width: 380px;
+}
+
+.register-container {
+    width: 450px;
+}
+
+/* Judul */
 h1 {
     margin: 0;
 
@@ -45,6 +52,10 @@ h1 {
     letter-spacing: 5px;
 
     color: #171717;
+}
+
+.register-container h1 {
+    margin-bottom: 30px;
 }
 
 /* Logo */
@@ -82,9 +93,13 @@ label {
     color: #333;
 }
 
-/* Input Username dan Password */
+/* Input */
 input[type="text"],
-input[type="password"] {
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
     width: 100%;
 
     padding: 13px 15px;
@@ -99,6 +114,8 @@ input[type="password"] {
 
     font-size: 14px;
 
+    font-family: Arial, sans-serif;
+
     outline: none;
 
     transition: 0.3s;
@@ -106,7 +123,11 @@ input[type="password"] {
 
 /* Efek ketika input dipilih */
 input[type="text"]:focus,
-input[type="password"]:focus {
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
     border-color: #222;
 
     background-color: #ffffff;
@@ -115,11 +136,89 @@ input[type="password"]:focus {
 }
 
 /* Placeholder */
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
     color: #aaa;
 }
 
-/* Tombol Login */
+/* Textarea Alamat */
+textarea {
+    width: 100%;
+
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+/* Radio Group */
+.radio-group {
+    margin-bottom: 20px;
+}
+
+/* Radio Button */
+input[type="radio"] {
+    width: auto;
+
+    margin: 0 5px 0 0;
+
+    cursor: pointer;
+}
+
+/* Label Radio */
+.radio-group label {
+    display: inline-block;
+
+    margin-right: 15px;
+
+    margin-bottom: 0;
+
+    font-size: 14px;
+
+    font-weight: normal;
+
+    cursor: pointer;
+}
+
+/* Checkbox Persetujuan */
+.persetujuan {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    width: 16px;
+
+    height: 16px;
+
+    margin: 2px 0 0;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+}
+
+/* Label Checkbox */
+.persetujuan label {
+    display: inline;
+
+    margin: 0;
+
+    font-size: 13px;
+
+    font-weight: normal;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+}
+
+/* Tombol Daftar */
 button[type="submit"] {
     width: 100%;
 
@@ -151,11 +250,14 @@ button[type="submit"]:hover {
     transform: translateY(-1px);
 }
 
-/* Link */
+/* Paragraf */
 p {
     text-align: center;
+
+    margin-top: 20px;
 }
 
+/* Link */
 a {
     color: #171717;
 
@@ -164,7 +266,7 @@ a {
     text-decoration: none;
 }
 
-/* Hover link */
+/* Hover Link */
 a:hover {
     text-decoration: underline;
 }
@@ -185,7 +287,8 @@ a:hover {
 /* Responsive Design */
 @media (max-width: 600px) {
 
-    .login-container {
+    .login-container,
+    .register-container {
         width: 90%;
 
         padding: 30px 25px;
@@ -200,7 +303,11 @@ a:hover {
     }
 
     input[type="text"],
+    input[type="email"],
     input[type="password"],
+    input[type="date"],
+    select,
+    textarea,
     button[type="submit"] {
         font-size: 16px;
     }
